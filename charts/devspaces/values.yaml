@@ -1,3 +1,4 @@
 oauth:
   clientId: ''
   clientSecret: ''
+  provider: ''
