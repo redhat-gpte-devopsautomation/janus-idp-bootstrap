@@ -54,8 +54,6 @@ argocd_cr:
       enabled: true
       tls:
         termination: reencrypt
-  controller:
-    appSync: 15s
   dex:
     openShiftOAuth: true
   resourceCustomizations: |
