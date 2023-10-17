@@ -10,7 +10,7 @@ namespaces:
 - janus-argocd
 
 # operator manages upgrades
-operator: 
+operator:
   channel: latest
   installPlanApproval: Automatic
   name: openshift-gitops-operator
@@ -36,6 +36,8 @@ argocd_cr:
   applicationSet: {}
   notifications:
     enabled: true
+  controller:
+    appSync: 30s
   rbac:
     defaultPolicy: 'role:admin'
     policy: |
