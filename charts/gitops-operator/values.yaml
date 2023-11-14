@@ -63,7 +63,7 @@ argocd_cr:
         hs = {}
         hs.status = "Healthy"
         return hs
-      group: config.openshift.io
+      group: networking.k8s.io
       kind: Ingress
   resourceCustomizations: |
     argoproj.io/Application:
