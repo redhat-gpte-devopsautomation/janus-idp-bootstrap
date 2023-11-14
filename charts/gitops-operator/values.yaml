@@ -58,6 +58,13 @@ argocd_cr:
         termination: reencrypt
   dex:
     openShiftOAuth: true
+  resourceHealthChecks:
+    - check: |
+        hs = {}
+        hs.status = "Healthy"
+        return hs
+      group: config.openshift.io
+      kind: Ingress
   resourceCustomizations: |
     argoproj.io/Application:
       health.lua: |
