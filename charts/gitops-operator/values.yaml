@@ -10,7 +10,7 @@ namespaces:
 - janus-argocd
 
 # operator manages upgrades
-operator: 
+operator:
   channel: latest
   installPlanApproval: Automatic
   name: openshift-gitops-operator
@@ -36,6 +36,8 @@ argocd_cr:
   applicationSet: {}
   notifications:
     enabled: true
+  controller:
+    appSync: 30s
   rbac:
     defaultPolicy: 'role:admin'
     policy: |
@@ -56,6 +58,13 @@ argocd_cr:
         termination: reencrypt
   dex:
     openShiftOAuth: true
+  resourceHealthChecks:
+    - check: |
+        hs = {}
+        hs.status = "Healthy"
+        return hs
+      group: networking.k8s.io
+      kind: Ingress
   resourceCustomizations: |
     argoproj.io/Application:
       health.lua: |
