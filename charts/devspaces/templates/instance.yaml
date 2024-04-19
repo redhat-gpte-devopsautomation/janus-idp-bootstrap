@@ -12,6 +12,7 @@ spec:
       template: <username>-devspaces
     secondsOfInactivityBeforeIdling: -1
     secondsOfRunBeforeIdling: -1
+    maxNumberOfRunningWorkspacesPerUser: 2
     storage:
       pvcStrategy: per-user
   components:
