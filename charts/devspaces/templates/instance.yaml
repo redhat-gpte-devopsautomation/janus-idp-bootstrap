@@ -14,7 +14,7 @@ spec:
     secondsOfRunBeforeIdling: -1
     maxNumberOfRunningWorkspacesPerUser: 2
     storage:
-      pvcStrategy: per-user
+      pvcStrategy: per-workspace
   components:
     cheServer:
       debug: false
@@ -27,7 +27,8 @@ spec:
       spec: {}
     metrics:
       enable: true
-    pluginRegistry: {}
+    pluginRegistry:
+      openVSXURL: 'https://open-vsx.org'
   containerRegistry: {}
   networking:
     auth:
