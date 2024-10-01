@@ -11,7 +11,7 @@ namespaces:
 
 # operator manages upgrades
 operator:
-  channel: gitops-1.12
+  channel: gitops-1.14
   installPlanApproval: Automatic
   name: openshift-gitops-operator
   sourceName: redhat-operators
