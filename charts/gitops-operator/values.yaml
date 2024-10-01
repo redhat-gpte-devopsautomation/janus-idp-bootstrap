@@ -11,7 +11,7 @@ namespaces:
 
 # operator manages upgrades
 operator:
-  channel: gitops-1.12
+  channel: gitops-1.14
   installPlanApproval: Automatic
   name: openshift-gitops-operator
   sourceName: redhat-operators
@@ -32,7 +32,7 @@ secrets: []
 
 # https://argocd-operator.readthedocs.io/en/latest/reference/argocd/
 argocd_cr:
-  version: v2.4.11
+  version: v2.12.4
   applicationSet: {}
   notifications:
     enabled: true
