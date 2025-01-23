@@ -1,4 +1,4 @@
-{{- if $.Values.devSpaces.operator.catalogSource.enabled }}
+{{- if .Values.devSpaces.operator.catalogSource.enabled }}
 apiVersion: operators.coreos.com/v1alpha1
 kind: CatalogSource
 metadata:
