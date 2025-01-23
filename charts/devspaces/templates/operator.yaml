@@ -9,7 +9,5 @@ spec:
   channel: {{ $.Values.devSpaces.operator.channel }}
   installPlanApproval: Automatic
   name: devspaces
-{{- if $.Values.devSpaces.operator.catalogSource.enabled -}}
   source: {{ $.Values.devSpaces.operator.catalogSource.name }}
   sourceNamespace: {{ $.Values.devSpaces.operator.catalogSource.namespace }}
-{{- end -}}
