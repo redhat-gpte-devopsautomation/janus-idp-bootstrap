@@ -6,10 +6,10 @@ devSpaces:
   operator:
     catalogSource:
       enabled: false
+      name: redhat-operators
       image: registry.redhat.io/redhat/redhat-operator-index
       tag: v4.14
-    source: redhat-operators
-    sourceNamespace: openshift-marketplace
+      namespace: openshift-marketplace
     namespace: openshift-operators
     channel: stable
     startingCSV: ""

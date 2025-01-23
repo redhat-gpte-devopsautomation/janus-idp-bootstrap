@@ -2,8 +2,8 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: CatalogSource
 metadata:
-  name: devspaces-catalog-source
-  namespace: {{ $.Values.devSpaces.operator.namespace }}
+  name: {{ $.Values.devSpaces.operator.catalogSource.name }}
+  namespace: {{ $.Values.devSpaces.operator.catalogSource.namespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
