@@ -16,6 +16,6 @@ spec:
   startingCSV: {{ $.Values.devSpaces.operator.startingCSV }}
 {{- end -}}
 {{- else -}}
-  source: {{ $.Values.devSpaces.operator.catalogSource.name }}
-  sourceNamespace: {{ $.Values.devSpaces.operator.catalogSource.namespace }}
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
 {{- end -}}
