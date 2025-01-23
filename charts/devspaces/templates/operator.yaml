@@ -10,6 +10,12 @@ spec:
   installPlanApproval: Automatic
   name: devspaces
 {{- if $.Values.devSpaces.operator.catalogSource.enabled }}
+  source: {{ $.Values.devSpaces.operator.catalogSource.name }}
+  sourceNamespace: {{ $.Values.devSpaces.operator.catalogSource.namespace }}
+{{- if $.Values.devSpaces.operator.startingCSV }}
+  startingCSV: {{ $.Values.devSpaces.operator.startingCSV }}
+{{- end }}
+{{- else }}
   source: redhat-operators
   sourceNamespace: openshift-marketplace
 {{- end }}
