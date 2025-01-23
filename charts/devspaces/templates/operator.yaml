@@ -4,10 +4,11 @@ metadata:
   name: devspaces
   namespace: openshift-operators
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    "helm.sh/hook-weight": "-5"
 spec:
   channel: stable
   installPlanApproval: Automatic
   name: devspaces
   source: redhat-operators
   sourceNamespace: openshift-marketplace
+  startingCSV: devspacesoperator.v3.16.1
