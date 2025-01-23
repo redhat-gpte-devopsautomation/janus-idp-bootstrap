@@ -9,8 +9,5 @@ spec:
   channel: {{ $.Values.devSpaces.operator.channel }}
   installPlanApproval: Automatic
   name: devspaces
-{{- if $.Values.devSpaces.operator.catalogSource.enabled -}}
-
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-{{- end -}}
