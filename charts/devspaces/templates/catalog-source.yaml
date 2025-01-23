@@ -1,0 +1,15 @@
+{{- if .Values.devSpaces.operator.catalogSource.enabled }}
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: {{ $.Values.devSpaces.operator.catalogSource.name }}
+  namespace: {{ $.Values.devSpaces.operator.catalogSource.namespace }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "-2"
+spec:
+  sourceType: grpc
+  image: >-
+    {{ $.Values.devSpaces.operator.catalogSource.image }}:{{ $.Values.devSpaces.operator.catalogSource.tag }}
+  displayName: "Red Hat DevSpaces"
+  publisher: "Red Hat AgnosticD"
+{{- end }}
