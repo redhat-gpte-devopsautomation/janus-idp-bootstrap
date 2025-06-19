@@ -5,6 +5,7 @@ metadata:
   namespace: openshift-devspaces
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   devEnvironments:
     defaultEditor: che-incubator/che-code/latest

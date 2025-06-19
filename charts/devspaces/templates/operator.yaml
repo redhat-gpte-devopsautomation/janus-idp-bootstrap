@@ -3,8 +3,6 @@ kind: Subscription
 metadata:
   name: devspaces
   namespace: {{ $.Values.devSpaces.operator.namespace }}
-  annotations:
-    "helm.sh/hook-weight": "-5"
 spec:
   channel: {{ $.Values.devSpaces.operator.channel }}
   installPlanApproval: Automatic
